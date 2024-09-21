@@ -3,4 +3,12 @@
 *.pyc
 .coverage
 *.egg-info/
-bayesian_optimization_solution.py
+
+# VS Code
+.vscode/
+
+# Debugging files
+*.log
+
+# OS generated files
+.DS_Store
