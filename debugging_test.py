@@ -23,12 +23,13 @@ def test_sort_list():
     assert sort_list([]) == [], "sort_list should handle empty lists"
     assert sort_list([1]) == [1], "sort_list should handle single-element lists"
 
-    # Test if logging is used
-    with io.StringIO() as buf, pytest.MonkeyPatch.context() as mp:
-        mp.setattr(sys, 'stdout', buf)
-        sort_list([3, 1, 4, 1, 5])
-        output = buf.getvalue().lower()
-        assert "comparisons" in output and "swaps" in output, "Use logging to output the number of comparisons and swaps"
+    # Test if print is used for output
+    captured_output = io.StringIO()
+    sys.stdout = captured_output
+    sort_list([3, 1, 4, 1, 5])
+    sys.stdout = sys.__stdout__
+    output = captured_output.getvalue().lower()
+    assert "comparisons" in output and "swaps" in output, "Use print to output the number of comparisons and swaps"
 
 def test_calculate_average():
     # Test correct functionality
