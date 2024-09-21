@@ -2,98 +2,76 @@
 
 ## 📚 Introduction
 
-This assignment is designed to help you practice various debugging techniques in Visual Studio Code (VS Code). You'll work through different debugging methods, including using print statements, setting breakpoints, inspecting variables, and using the debug console.
+This assignment is designed to help you practice various debugging techniques in Visual Studio Code (VS Code). You'll implement and debug three functions using different methods, including print statements and output logging.
 
 ## 🎯 Objectives
 
 By the end of this assignment, you should be able to:
 
 1. Use print statements for basic debugging
-2. Set and use breakpoints in VS Code
-3. Inspect variables during code execution
-4. Utilize the VS Code debug console
-5. Apply different debugging techniques to solve programming problems
+2. Implement and debug a sorting algorithm
+3. Use print statements to inspect variables during code execution
+4. Apply different debugging techniques to solve programming problems
 
 ## 🛠️ Setup
 
-1. Ensure you have Python and pytest installed in your Codespace.
-2. Familiarize yourself with the VS Code debugging interface.
+1. Ensure you have Python installed in your environment.
+2. Install pytest by running `pip install pytest` in your terminal.
+3. Open the `debugging.py` file in VS Code.
 
 ## 📝 Instructions
 
-This assignment is divided into several debugging steps. You'll complete one step at a time, run tests to verify your work, and then move on to the next step.
+### Step 1: Implement the functions
 
-### Getting Started
+Open `debugging.py` and implement the following functions:
 
-1. Open `main.py` in your VS Code editor.
-2. Locate the `DEBUG_STEP` variable at the top of the file. It should be set to 0 initially.
+1. `find_max(numbers)`: Find and return the maximum number in the list. Use print statements to debug your implementation.
+2. `sort_list(numbers)`: Sort the list in ascending order. Use print statements to output the number of comparisons and swaps.
+3. `calculate_average(numbers)`: Calculate and return the average of the numbers. Use print statements to debug your implementation.
 
-### Completing Each Step
+### Step 2: Run the main program
 
-For each debugging step:
+After implementing the functions, run the main program to test your implementation:
 
-1. Read the TODO comments in the `main.py` file for the current `DEBUG_STEP`.
-2. Implement the required debugging technique as instructed.
-3. Save your changes.
-4. Run the tests using the command `pytest test_main.py` in the terminal.
-5. If the tests pass, increment `DEBUG_STEP` by 1 in `main.py`.
-6. If the tests fail, review your implementation and try again.
+1. Open a terminal in VS Code.
+2. Run the command: `python debugging.py`
+3. Observe the output and ensure it looks correct.
 
-### Debugging Steps
+### Step 3: Run the tests
 
-#### Step 1: Print Statements (DEBUG_STEP = 1)
-- Implement print statements in the `find_max` function to debug the code.
-- Use print statements to show the current maximum and the number being compared in each iteration.
+To verify your implementation, run the provided tests:
 
-#### Step 2: Breakpoints (DEBUG_STEP = 2)
-- Set a breakpoint in the `sort_list` function.
-- Use VS Code's stepping functionality to debug the sorting algorithm.
+1. In the terminal, run the command: `pytest debugging_test.py`
+2. If any tests fail, read the error messages carefully.
+3. Go back to `debugging.py`, revise your code, and try again.
+4. Repeat steps 2 and 3 until all tests pass.
 
-#### Step 3: Variable Inspection (DEBUG_STEP = 3)
-- In the `calculate_average` function, use variable inspection to debug.
-- Pay attention to the `total` and `count` variables as you step through the code.
+## 🧪 Testing
 
-#### Step 4: Debug Console (DEBUG_STEP = 4)
-- Use the VS Code debug console to evaluate expressions.
-- Try the suggested expressions and observe the results.
+The `debugging_test.py` file contains tests for each function. These tests check both the correctness of your implementation and the use of appropriate debugging techniques (print statements).
 
-## 🧪 Running Tests
-
-After implementing each debugging step:
-
-1. Open a new terminal in VS Code.
-2. Run the command: `pytest test_main.py`
-3. Review the test results:
-   - If all tests pass, move on to the next debugging step.
-   - If any tests fail, read the error messages, revise your code, and try again.
-
-## 📈 Progress Tracking
-
-Your progress is tracked by the `DEBUG_STEP` variable:
-- `DEBUG_STEP = 0`: Not started
-- `DEBUG_STEP = 1`: Completed print statement debugging
-- `DEBUG_STEP = 2`: Completed breakpoint debugging
-- `DEBUG_STEP = 3`: Completed variable inspection debugging
-- `DEBUG_STEP = 4`: Completed debug console usage
-
-## 🏁 Completion
+## 📈 Completion Criteria
 
 You've completed the assignment when:
-1. All debugging steps are implemented correctly.
-2. All tests pass when `DEBUG_STEP = 4`.
-3. You can explain how each debugging technique helped you understand the code better.
+
+1. All functions in `debugging.py` are correctly implemented.
+2. You've used print statements for debugging in `find_max` and `calculate_average`.
+3. You've used print statements to log comparisons and swaps in `sort_list`.
+4. All tests in `debugging_test.py` pass when you run `pytest debugging_test.py`.
 
 ## 💡 Tips
 
-- Don't rush! Take your time to understand each debugging technique.
-- If you're stuck, review the VS Code debugging documentation or ask for help.
+- Don't rush! Take your time to understand each function's requirements.
+- Use meaningful print statements that help you understand what's happening in your code.
+- If you're stuck, try adding more print statements to see the state of your variables at different points in the code.
 - Remember, debugging is a crucial skill in programming. The more you practice, the better you'll become.
 
 ## 🆘 Getting Help
 
 If you encounter any issues or have questions:
-1. Review the TODO comments and this README file carefully.
-2. Check the VS Code documentation for debugging Python.
+
+1. Review this README file and the comments in `debugging.py` carefully.
+2. Check the Python documentation for any functions or methods you're unsure about.
 3. If you're still stuck, reach out to your instructor or teaching assistant for help.
 
 Good luck, and happy debugging! 🐛🔍
